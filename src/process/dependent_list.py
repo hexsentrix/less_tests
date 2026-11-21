@@ -31,8 +31,8 @@ import json
 from dataclasses import dataclass
 
 
-@dataclass
-class Test():
+@dataclass(frozen=True)
+class Test:
     file: str
     number: int
     seconds: float
