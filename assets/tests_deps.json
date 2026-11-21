@@ -1,0 +1,2373 @@
+{
+    "__main__": {
+        "bacon": 0,
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_athena",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_databricks",
+            "tests.dialects.test_dax",
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_doris",
+            "tests.dialects.test_dremio",
+            "tests.dialects.test_drill",
+            "tests.dialects.test_druid",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_dune",
+            "tests.dialects.test_exasol",
+            "tests.dialects.test_fabric",
+            "tests.dialects.test_hive",
+            "tests.dialects.test_materialize",
+            "tests.dialects.test_mysql",
+            "tests.dialects.test_oracle",
+            "tests.dialects.test_pipe_syntax",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_prql",
+            "tests.dialects.test_redshift",
+            "tests.dialects.test_risingwave",
+            "tests.dialects.test_singlestore",
+            "tests.dialects.test_snowflake",
+            "tests.dialects.test_solr",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_sqlite",
+            "tests.dialects.test_starrocks",
+            "tests.dialects.test_tableau",
+            "tests.dialects.test_teradata",
+            "tests.dialects.test_trino",
+            "tests.dialects.test_tsql",
+            "tests.gen_fixtures",
+            "tests.helpers",
+            "tests.leakcheck",
+            "tests.sqlglot",
+            "tests.test_anonymize",
+            "tests.test_build",
+            "tests.test_dialect_entry_points",
+            "tests.test_dialect_imports",
+            "tests.test_diff",
+            "tests.test_docs",
+            "tests.test_errors",
+            "tests.test_executor",
+            "tests.test_expressions",
+            "tests.test_generator",
+            "tests.test_helper",
+            "tests.test_integration_loader",
+            "tests.test_jsonpath",
+            "tests.test_lineage",
+            "tests.test_optimize_cross_joins",
+            "tests.test_optimizer",
+            "tests.test_parser",
+            "tests.test_schema",
+            "tests.test_serde",
+            "tests.test_simplify_between",
+            "tests.test_sqlglotc",
+            "tests.test_time",
+            "tests.test_tokens",
+            "tests.test_transforms",
+            "tests.test_transpile",
+            "tests.test_typing"
+        ],
+        "name": "__main__",
+        "path": null
+    },
+    "numpy": {
+        "bacon": 2,
+        "imported_by": [
+            "numpy",
+            "tests.test_executor"
+        ],
+        "imports": [
+            "numpy"
+        ],
+        "name": "numpy",
+        "path": "/usr/lib64/python3.14/site-packages/numpy/__init__.py"
+    },
+    "pandas": {
+        "bacon": 2,
+        "imported_by": [
+            "pandas",
+            "pandas.testing",
+            "tests.test_executor",
+            "tests.test_optimizer"
+        ],
+        "imports": [
+            "pandas",
+            "pandas.testing"
+        ],
+        "name": "pandas",
+        "path": "/usr/lib64/python3.14/site-packages/pandas/__init__.py"
+    },
+    "pandas.testing": {
+        "bacon": 2,
+        "imported_by": [
+            "pandas",
+            "tests.test_executor",
+            "tests.test_optimizer"
+        ],
+        "imports": [
+            "pandas"
+        ],
+        "name": "pandas.testing",
+        "path": "/usr/lib64/python3.14/site-packages/pandas/testing.py"
+    },
+    "pytz": {
+        "bacon": 2,
+        "imported_by": [
+            "pytz",
+            "tests.dialects.test_bigquery",
+            "tests.test_expressions"
+        ],
+        "imports": [
+            "pytz"
+        ],
+        "name": "pytz",
+        "path": "/usr/lib/python3.14/site-packages/pytz/__init__.py"
+    },
+    "setuptools": {
+        "bacon": 2,
+        "imported_by": [
+            "setuptools",
+            "setuptools.command.build_ext",
+            "tests.test_sqlglotc"
+        ],
+        "imports": [
+            "setuptools"
+        ],
+        "name": "setuptools",
+        "path": "/usr/lib/python3.14/site-packages/setuptools/__init__.py"
+    },
+    "setuptools.command": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.test_sqlglotc"
+        ],
+        "name": "setuptools.command",
+        "path": "/usr/lib/python3.14/site-packages/setuptools/command/__init__.py"
+    },
+    "setuptools.command.build_ext": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.test_sqlglotc"
+        ],
+        "imports": [
+            "setuptools"
+        ],
+        "name": "setuptools.command.build_ext",
+        "path": "/usr/lib/python3.14/site-packages/setuptools/command/build_ext.py"
+    },
+    "sqlglot": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.anonymize",
+            "sqlglot.dialects.dialect",
+            "sqlglot.dialects.duckdb",
+            "sqlglot.dialects.exasol",
+            "sqlglot.dialects.mysql",
+            "sqlglot.diff",
+            "sqlglot.errors",
+            "sqlglot.executor",
+            "sqlglot.executor.env",
+            "sqlglot.executor.python",
+            "sqlglot.executor.table",
+            "sqlglot.expressions",
+            "sqlglot.expressions.core",
+            "sqlglot.generator",
+            "sqlglot.generators.hive",
+            "sqlglot.helper",
+            "sqlglot.jsonpath",
+            "sqlglot.lineage",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.canonicalize_internal_names",
+            "sqlglot.optimizer.journal",
+            "sqlglot.optimizer.normalize",
+            "sqlglot.optimizer.normalize_identifiers",
+            "sqlglot.optimizer.optimize_joins",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.scope",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.parser",
+            "sqlglot.parsers.base",
+            "sqlglot.parsers.snowflake",
+            "sqlglot.planner",
+            "sqlglot.schema",
+            "sqlglot.time",
+            "sqlglot.tokens",
+            "sqlglot.transforms",
+            "sqlglot.typing",
+            "tests.dialects.test_athena",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_databricks",
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_doris",
+            "tests.dialects.test_dremio",
+            "tests.dialects.test_druid",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_dune",
+            "tests.dialects.test_exasol",
+            "tests.dialects.test_hive",
+            "tests.dialects.test_mysql",
+            "tests.dialects.test_oracle",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_redshift",
+            "tests.dialects.test_singlestore",
+            "tests.dialects.test_snowflake",
+            "tests.dialects.test_solr",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_sqlite",
+            "tests.dialects.test_starrocks",
+            "tests.dialects.test_teradata",
+            "tests.dialects.test_trino",
+            "tests.dialects.test_tsql",
+            "tests.gen_fixtures",
+            "tests.leakcheck",
+            "tests.test_anonymize",
+            "tests.test_build",
+            "tests.test_dialect_entry_points",
+            "tests.test_dialect_imports",
+            "tests.test_diff",
+            "tests.test_docs",
+            "tests.test_errors",
+            "tests.test_executor",
+            "tests.test_expressions",
+            "tests.test_generator",
+            "tests.test_helper",
+            "tests.test_jsonpath",
+            "tests.test_lineage",
+            "tests.test_optimize_cross_joins",
+            "tests.test_optimizer",
+            "tests.test_parser",
+            "tests.test_schema",
+            "tests.test_serde",
+            "tests.test_simplify_between",
+            "tests.test_time",
+            "tests.test_tokens",
+            "tests.test_transforms",
+            "tests.test_transpile",
+            "tests.test_typing"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.diff",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.generator",
+            "sqlglot.parser",
+            "sqlglot.schema",
+            "sqlglot.tokens"
+        ],
+        "name": "sqlglot",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/__init__.py"
+    },
+    "sqlglot.anonymize": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.test_anonymize"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.tokens"
+        ],
+        "name": "sqlglot.anonymize",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/anonymize.py"
+    },
+    "sqlglot.dialects": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.anonymize",
+            "sqlglot.dialects.dialect",
+            "sqlglot.dialects.duckdb",
+            "sqlglot.dialects.exasol",
+            "sqlglot.dialects.mysql",
+            "sqlglot.diff",
+            "sqlglot.executor",
+            "sqlglot.executor.python",
+            "sqlglot.executor.table",
+            "sqlglot.expressions.core",
+            "sqlglot.generator",
+            "sqlglot.generators.hive",
+            "sqlglot.jsonpath",
+            "sqlglot.lineage",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.normalize_identifiers",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.parser",
+            "sqlglot.parsers.snowflake",
+            "sqlglot.schema",
+            "sqlglot.tokens",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_druid",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_exasol",
+            "tests.dialects.test_mysql",
+            "tests.dialects.test_spark",
+            "tests.test_dialect_entry_points",
+            "tests.test_dialect_imports",
+            "tests.test_generator",
+            "tests.test_time",
+            "tests.test_tokens"
+        ],
+        "name": "sqlglot.dialects",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/dialects/__init__.py"
+    },
+    "sqlglot.dialects.dialect": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.anonymize",
+            "sqlglot.dialects.duckdb",
+            "sqlglot.dialects.exasol",
+            "sqlglot.dialects.mysql",
+            "sqlglot.diff",
+            "sqlglot.executor",
+            "sqlglot.executor.python",
+            "sqlglot.executor.table",
+            "sqlglot.expressions.core",
+            "sqlglot.generator",
+            "sqlglot.generators.hive",
+            "sqlglot.jsonpath",
+            "sqlglot.lineage",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.normalize_identifiers",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.parser",
+            "sqlglot.parsers.snowflake",
+            "sqlglot.schema",
+            "sqlglot.tokens",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_druid",
+            "tests.dialects.test_spark",
+            "tests.test_dialect_entry_points",
+            "tests.test_time"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.generator",
+            "sqlglot.helper",
+            "sqlglot.jsonpath",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.scope",
+            "sqlglot.parser",
+            "sqlglot.parsers",
+            "sqlglot.parsers.base",
+            "sqlglot.time",
+            "sqlglot.tokens",
+            "sqlglot.typing"
+        ],
+        "name": "sqlglot.dialects.dialect",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/dialects/dialect.py"
+    },
+    "sqlglot.dialects.duckdb": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_duckdb"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.generators",
+            "sqlglot.parsers",
+            "sqlglot.tokens",
+            "sqlglot.typing"
+        ],
+        "name": "sqlglot.dialects.duckdb",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/dialects/duckdb.py"
+    },
+    "sqlglot.dialects.exasol": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.dialects.test_exasol"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.generators",
+            "sqlglot.parsers",
+            "sqlglot.tokens"
+        ],
+        "name": "sqlglot.dialects.exasol",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/dialects/exasol.py"
+    },
+    "sqlglot.dialects.mysql": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.dialects.test_mysql"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.generators",
+            "sqlglot.parsers",
+            "sqlglot.tokens",
+            "sqlglot.typing"
+        ],
+        "name": "sqlglot.dialects.mysql",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/dialects/mysql.py"
+    },
+    "sqlglot.diff": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "tests.test_diff"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.expressions",
+            "sqlglot.helper"
+        ],
+        "name": "sqlglot.diff",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/diff.py"
+    },
+    "sqlglot.errors": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.anonymize",
+            "sqlglot.dialects.dialect",
+            "sqlglot.executor",
+            "sqlglot.executor.python",
+            "sqlglot.expressions.core",
+            "sqlglot.generator",
+            "sqlglot.jsonpath",
+            "sqlglot.lineage",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.normalize",
+            "sqlglot.optimizer.optimize_joins",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.scope",
+            "sqlglot.parser",
+            "sqlglot.schema",
+            "sqlglot.transforms",
+            "tests.dialects.test_athena",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_databricks",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_starrocks",
+            "tests.dialects.test_tsql",
+            "tests.test_errors",
+            "tests.test_executor",
+            "tests.test_generator",
+            "tests.test_jsonpath",
+            "tests.test_optimizer",
+            "tests.test_parser",
+            "tests.test_schema",
+            "tests.test_tokens",
+            "tests.test_transpile"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.helper"
+        ],
+        "name": "sqlglot.errors",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/errors.py"
+    },
+    "sqlglot.executor": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.executor",
+            "sqlglot.executor.python",
+            "tests.test_executor"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.executor",
+            "sqlglot.executor.python",
+            "sqlglot.executor.table",
+            "sqlglot.expressions",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.planner",
+            "sqlglot.schema"
+        ],
+        "name": "sqlglot.executor",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/executor/__init__.py"
+    },
+    "sqlglot.executor.env": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.executor.python",
+            "tests.test_executor"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.generator",
+            "sqlglot.helper"
+        ],
+        "name": "sqlglot.executor.env",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/executor/env.py"
+    },
+    "sqlglot.executor.python": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.executor",
+            "tests.test_executor"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.executor",
+            "sqlglot.executor.env",
+            "sqlglot.executor.table",
+            "sqlglot.generators",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.scope",
+            "sqlglot.planner",
+            "sqlglot.tokens"
+        ],
+        "name": "sqlglot.executor.python",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/executor/python.py"
+    },
+    "sqlglot.executor.table": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.executor",
+            "sqlglot.executor.python",
+            "tests.test_executor"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.helper",
+            "sqlglot.schema"
+        ],
+        "name": "sqlglot.executor.table",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/executor/table.py"
+    },
+    "sqlglot.expressions": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.dialects.dialect",
+            "sqlglot.diff",
+            "sqlglot.executor",
+            "sqlglot.expressions",
+            "sqlglot.expressions.core",
+            "sqlglot.generator",
+            "sqlglot.helper",
+            "sqlglot.jsonpath",
+            "sqlglot.parser",
+            "sqlglot.schema",
+            "sqlglot.transforms",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_mysql",
+            "tests.leakcheck",
+            "tests.test_generator",
+            "tests.test_serde",
+            "tests.test_transforms"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.expressions",
+            "sqlglot.expressions.core",
+            "sqlglot.helper"
+        ],
+        "name": "sqlglot.expressions",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/expressions/__init__.py"
+    },
+    "sqlglot.expressions.core": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.expressions",
+            "sqlglot.generator",
+            "tests.leakcheck",
+            "tests.test_generator",
+            "tests.test_serde"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.helper"
+        ],
+        "name": "sqlglot.expressions.core",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/expressions/core.py"
+    },
+    "sqlglot.generator": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.dialects.dialect",
+            "sqlglot.executor.env",
+            "sqlglot.generators.hive",
+            "sqlglot.transforms",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_sqlite",
+            "tests.dialects.test_trino",
+            "tests.test_diff",
+            "tests.test_generator"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.expressions.core",
+            "sqlglot.helper",
+            "sqlglot.jsonpath",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.scope",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.time",
+            "sqlglot.tokens",
+            "sqlglot.transforms"
+        ],
+        "name": "sqlglot.generator",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/generator.py"
+    },
+    "sqlglot.generators": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.duckdb",
+            "sqlglot.dialects.exasol",
+            "sqlglot.dialects.mysql",
+            "sqlglot.executor.python",
+            "tests.test_time"
+        ],
+        "name": "sqlglot.generators",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/generators/__init__.py"
+    },
+    "sqlglot.generators.hive": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.test_time"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.generator",
+            "sqlglot.time",
+            "sqlglot.transforms"
+        ],
+        "name": "sqlglot.generators.hive",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/generators/hive.py"
+    },
+    "sqlglot.helper": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "sqlglot.diff",
+            "sqlglot.errors",
+            "sqlglot.executor",
+            "sqlglot.executor.env",
+            "sqlglot.executor.table",
+            "sqlglot.expressions",
+            "sqlglot.expressions.core",
+            "sqlglot.generator",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.canonicalize_internal_names",
+            "sqlglot.optimizer.normalize",
+            "sqlglot.optimizer.optimize_joins",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.scope",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.parser",
+            "sqlglot.parsers.snowflake",
+            "sqlglot.planner",
+            "sqlglot.schema",
+            "sqlglot.transforms",
+            "sqlglot.typing",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_sqlite",
+            "tests.test_helper",
+            "tests.test_transpile"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.expressions"
+        ],
+        "name": "sqlglot.helper",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/helper.py"
+    },
+    "sqlglot.jsonpath": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "sqlglot.generator",
+            "tests.test_jsonpath"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.tokens"
+        ],
+        "name": "sqlglot.jsonpath",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/jsonpath.py"
+    },
+    "sqlglot.lineage": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.dialects.test_teradata",
+            "tests.test_lineage"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.normalize_identifiers",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.scope",
+            "sqlglot.schema"
+        ],
+        "name": "sqlglot.lineage",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/lineage.py"
+    },
+    "sqlglot.optimizer": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "sqlglot.executor",
+            "sqlglot.executor.python",
+            "sqlglot.generator",
+            "sqlglot.lineage",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.canonicalize_internal_names",
+            "sqlglot.optimizer.normalize",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.parser",
+            "sqlglot.planner",
+            "sqlglot.transforms",
+            "sqlglot.typing",
+            "tests.dialects.test_athena",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_dremio",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_mysql",
+            "tests.dialects.test_oracle",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_redshift",
+            "tests.dialects.test_singlestore",
+            "tests.dialects.test_snowflake",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_sqlite",
+            "tests.dialects.test_teradata",
+            "tests.dialects.test_trino",
+            "tests.dialects.test_tsql",
+            "tests.gen_fixtures",
+            "tests.test_executor",
+            "tests.test_lineage",
+            "tests.test_optimize_cross_joins",
+            "tests.test_optimizer",
+            "tests.test_schema",
+            "tests.test_serde",
+            "tests.test_simplify_between"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.scope"
+        ],
+        "name": "sqlglot.optimizer",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/__init__.py"
+    },
+    "sqlglot.optimizer.annotate_types": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "sqlglot.executor",
+            "sqlglot.generator",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.typing",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_dremio",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_mysql",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_redshift",
+            "tests.dialects.test_snowflake",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_sqlite",
+            "tests.dialects.test_teradata",
+            "tests.dialects.test_trino",
+            "tests.dialects.test_tsql",
+            "tests.test_optimizer",
+            "tests.test_schema",
+            "tests.test_serde"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.scope",
+            "sqlglot.schema",
+            "sqlglot.typing"
+        ],
+        "name": "sqlglot.optimizer.annotate_types",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/annotate_types.py"
+    },
+    "sqlglot.optimizer.canonicalize_internal_names": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.test_optimizer"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.scope"
+        ],
+        "name": "sqlglot.optimizer.canonicalize_internal_names",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/canonicalize_internal_names.py"
+    },
+    "sqlglot.optimizer.journal": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.test_optimizer"
+        ],
+        "imports": [
+            "sqlglot"
+        ],
+        "name": "sqlglot.optimizer.journal",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/journal.py"
+    },
+    "sqlglot.optimizer.normalize": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.transforms",
+            "tests.test_optimizer"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.scope",
+            "sqlglot.optimizer.simplify"
+        ],
+        "name": "sqlglot.optimizer.normalize",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/normalize.py"
+    },
+    "sqlglot.optimizer.normalize_identifiers": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.lineage",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.parser",
+            "tests.dialects.test_snowflake"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect"
+        ],
+        "name": "sqlglot.optimizer.normalize_identifiers",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/normalize_identifiers.py"
+    },
+    "sqlglot.optimizer.optimize_joins": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.test_optimize_cross_joins"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.helper"
+        ],
+        "name": "sqlglot.optimizer.optimize_joins",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/optimize_joins.py"
+    },
+    "sqlglot.optimizer.qualify": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.lineage",
+            "tests.dialects.test_athena",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_oracle",
+            "tests.dialects.test_singlestore",
+            "tests.dialects.test_snowflake",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_teradata",
+            "tests.dialects.test_tsql",
+            "tests.test_lineage",
+            "tests.test_optimize_cross_joins",
+            "tests.test_optimizer",
+            "tests.test_schema"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.normalize_identifiers",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.schema"
+        ],
+        "name": "sqlglot.optimizer.qualify",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/qualify.py"
+    },
+    "sqlglot.optimizer.qualify_columns": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.optimizer.qualify",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_snowflake"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.scope",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.schema"
+        ],
+        "name": "sqlglot.optimizer.qualify_columns",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/qualify_columns.py"
+    },
+    "sqlglot.optimizer.resolver": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.optimizer.qualify_columns",
+            "tests.test_optimizer"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.scope",
+            "sqlglot.schema"
+        ],
+        "name": "sqlglot.optimizer.resolver",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/resolver.py"
+    },
+    "sqlglot.optimizer.scope": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "sqlglot.executor.python",
+            "sqlglot.generator",
+            "sqlglot.lineage",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.canonicalize_internal_names",
+            "sqlglot.optimizer.normalize",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.parser",
+            "sqlglot.planner",
+            "sqlglot.transforms",
+            "tests.test_lineage",
+            "tests.test_optimizer",
+            "tests.test_schema"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.helper"
+        ],
+        "name": "sqlglot.optimizer.scope",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/scope.py"
+    },
+    "sqlglot.optimizer.simplify": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.generator",
+            "sqlglot.optimizer.normalize",
+            "sqlglot.optimizer.qualify_columns",
+            "tests.dialects.test_postgres",
+            "tests.test_simplify_between"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.scope",
+            "sqlglot.parser",
+            "sqlglot.schema"
+        ],
+        "name": "sqlglot.optimizer.simplify",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/optimizer/simplify.py"
+    },
+    "sqlglot.parser": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.dialects.dialect",
+            "sqlglot.optimizer.simplify",
+            "sqlglot.parsers.base",
+            "sqlglot.parsers.snowflake",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_snowflake",
+            "tests.test_expressions",
+            "tests.test_parser",
+            "tests.test_transpile"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.normalize_identifiers",
+            "sqlglot.optimizer.scope",
+            "sqlglot.time",
+            "sqlglot.tokens"
+        ],
+        "name": "sqlglot.parser",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/parser.py"
+    },
+    "sqlglot.parsers": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "sqlglot.dialects.duckdb",
+            "sqlglot.dialects.exasol",
+            "sqlglot.dialects.mysql",
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_snowflake",
+            "tests.test_generator"
+        ],
+        "name": "sqlglot.parsers",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/parsers/__init__.py"
+    },
+    "sqlglot.parsers.base": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "tests.dialects.test_dialect"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.parser",
+            "sqlglot.tokens"
+        ],
+        "name": "sqlglot.parsers.base",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/parsers/base.py"
+    },
+    "sqlglot.parsers.snowflake": {
+        "bacon": 2,
+        "imported_by": [
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_snowflake",
+            "tests.test_generator"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.helper",
+            "sqlglot.parser",
+            "sqlglot.tokens"
+        ],
+        "name": "sqlglot.parsers.snowflake",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/parsers/snowflake.py"
+    },
+    "sqlglot.planner": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.executor",
+            "sqlglot.executor.python",
+            "tests.test_executor"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.scope"
+        ],
+        "name": "sqlglot.planner",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/planner.py"
+    },
+    "sqlglot.schema": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.executor",
+            "sqlglot.executor.table",
+            "sqlglot.lineage",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.simplify",
+            "tests.dialects.test_redshift",
+            "tests.test_lineage",
+            "tests.test_optimizer",
+            "tests.test_schema"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.helper"
+        ],
+        "name": "sqlglot.schema",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/schema.py"
+    },
+    "sqlglot.time": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "sqlglot.generator",
+            "sqlglot.generators.hive",
+            "sqlglot.parser",
+            "tests.test_time"
+        ],
+        "imports": [
+            "sqlglot"
+        ],
+        "name": "sqlglot.time",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/time.py"
+    },
+    "sqlglot.tokens": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot",
+            "sqlglot.anonymize",
+            "sqlglot.dialects.dialect",
+            "sqlglot.dialects.duckdb",
+            "sqlglot.dialects.exasol",
+            "sqlglot.dialects.mysql",
+            "sqlglot.executor.python",
+            "sqlglot.generator",
+            "sqlglot.jsonpath",
+            "sqlglot.parser",
+            "sqlglot.parsers.base",
+            "sqlglot.parsers.snowflake",
+            "tests.dialects.test_athena",
+            "tests.test_anonymize",
+            "tests.test_tokens"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect"
+        ],
+        "name": "sqlglot.tokens",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/tokens.py"
+    },
+    "sqlglot.transforms": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.generator",
+            "sqlglot.generators.hive",
+            "tests.test_transforms"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.generator",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.normalize",
+            "sqlglot.optimizer.scope"
+        ],
+        "name": "sqlglot.transforms",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/transforms.py"
+    },
+    "sqlglot.typing": {
+        "bacon": 2,
+        "imported_by": [
+            "sqlglot.dialects.dialect",
+            "sqlglot.dialects.duckdb",
+            "sqlglot.dialects.mysql",
+            "sqlglot.optimizer.annotate_types",
+            "tests.test_typing"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types"
+        ],
+        "name": "sqlglot.typing",
+        "path": "/home/muaz/comp/sqlglot/sqlglot/typing/__init__.py"
+    },
+    "tests": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "tests.dialects.test_athena",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_databricks",
+            "tests.dialects.test_dax",
+            "tests.dialects.test_dialect",
+            "tests.dialects.test_doris",
+            "tests.dialects.test_dremio",
+            "tests.dialects.test_drill",
+            "tests.dialects.test_druid",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_dune",
+            "tests.dialects.test_exasol",
+            "tests.dialects.test_fabric",
+            "tests.dialects.test_hive",
+            "tests.dialects.test_materialize",
+            "tests.dialects.test_mysql",
+            "tests.dialects.test_oracle",
+            "tests.dialects.test_pipe_syntax",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_prql",
+            "tests.dialects.test_redshift",
+            "tests.dialects.test_risingwave",
+            "tests.dialects.test_singlestore",
+            "tests.dialects.test_snowflake",
+            "tests.dialects.test_solr",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_sqlite",
+            "tests.dialects.test_starrocks",
+            "tests.dialects.test_tableau",
+            "tests.dialects.test_teradata",
+            "tests.dialects.test_trino",
+            "tests.dialects.test_tsql",
+            "tests.leakcheck",
+            "tests.test_executor",
+            "tests.test_generator",
+            "tests.test_jsonpath",
+            "tests.test_optimizer",
+            "tests.test_parser",
+            "tests.test_serde",
+            "tests.test_transpile"
+        ],
+        "name": "tests",
+        "path": "/home/muaz/comp/sqlglot/tests/__init__.py"
+    },
+    "tests.dialects": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "tests.dialects.test_athena",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_databricks",
+            "tests.dialects.test_dax",
+            "tests.dialects.test_doris",
+            "tests.dialects.test_dremio",
+            "tests.dialects.test_drill",
+            "tests.dialects.test_druid",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_dune",
+            "tests.dialects.test_exasol",
+            "tests.dialects.test_fabric",
+            "tests.dialects.test_hive",
+            "tests.dialects.test_materialize",
+            "tests.dialects.test_mysql",
+            "tests.dialects.test_oracle",
+            "tests.dialects.test_pipe_syntax",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_prql",
+            "tests.dialects.test_redshift",
+            "tests.dialects.test_risingwave",
+            "tests.dialects.test_singlestore",
+            "tests.dialects.test_snowflake",
+            "tests.dialects.test_solr",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_sqlite",
+            "tests.dialects.test_starrocks",
+            "tests.dialects.test_tableau",
+            "tests.dialects.test_teradata",
+            "tests.dialects.test_trino",
+            "tests.dialects.test_tsql"
+        ],
+        "name": "tests.dialects",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/__init__.py"
+    },
+    "tests.dialects.test_athena": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.tokens",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_athena",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_athena.py"
+    },
+    "tests.dialects.test_bigquery": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "pytz",
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.generator",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.parser",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_bigquery",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_bigquery.py"
+    },
+    "tests.dialects.test_clickhouse": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.qualify_columns",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_clickhouse",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_clickhouse.py"
+    },
+    "tests.dialects.test_databricks": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_databricks",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_databricks.py"
+    },
+    "tests.dialects.test_dax": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_dax",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_dax.py"
+    },
+    "tests.dialects.test_dialect": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "tests.dialects.test_athena",
+            "tests.dialects.test_bigquery",
+            "tests.dialects.test_clickhouse",
+            "tests.dialects.test_databricks",
+            "tests.dialects.test_dax",
+            "tests.dialects.test_doris",
+            "tests.dialects.test_dremio",
+            "tests.dialects.test_drill",
+            "tests.dialects.test_druid",
+            "tests.dialects.test_duckdb",
+            "tests.dialects.test_dune",
+            "tests.dialects.test_exasol",
+            "tests.dialects.test_fabric",
+            "tests.dialects.test_hive",
+            "tests.dialects.test_materialize",
+            "tests.dialects.test_mysql",
+            "tests.dialects.test_oracle",
+            "tests.dialects.test_pipe_syntax",
+            "tests.dialects.test_postgres",
+            "tests.dialects.test_presto",
+            "tests.dialects.test_prql",
+            "tests.dialects.test_redshift",
+            "tests.dialects.test_risingwave",
+            "tests.dialects.test_singlestore",
+            "tests.dialects.test_snowflake",
+            "tests.dialects.test_solr",
+            "tests.dialects.test_spark",
+            "tests.dialects.test_sqlite",
+            "tests.dialects.test_starrocks",
+            "tests.dialects.test_tableau",
+            "tests.dialects.test_teradata",
+            "tests.dialects.test_trino",
+            "tests.dialects.test_tsql"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.duckdb",
+            "sqlglot.generator",
+            "sqlglot.parser",
+            "sqlglot.parsers",
+            "sqlglot.parsers.base",
+            "sqlglot.parsers.snowflake",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.dialects.test_dialect",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_dialect.py"
+    },
+    "tests.dialects.test_doris": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_doris",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_doris.py"
+    },
+    "tests.dialects.test_dremio": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_dremio",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_dremio.py"
+    },
+    "tests.dialects.test_drill": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_drill",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_drill.py"
+    },
+    "tests.dialects.test_druid": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_druid",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_druid.py"
+    },
+    "tests.dialects.test_duckdb": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.duckdb",
+            "sqlglot.generator",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_duckdb",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_duckdb.py"
+    },
+    "tests.dialects.test_dune": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_dune",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_dune.py"
+    },
+    "tests.dialects.test_exasol": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.exasol",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_exasol",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_exasol.py"
+    },
+    "tests.dialects.test_fabric": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_fabric",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_fabric.py"
+    },
+    "tests.dialects.test_hive": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_hive",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_hive.py"
+    },
+    "tests.dialects.test_materialize": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_materialize",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_materialize.py"
+    },
+    "tests.dialects.test_mysql": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.mysql",
+            "sqlglot.expressions",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_mysql",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_mysql.py"
+    },
+    "tests.dialects.test_oracle": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.qualify",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_oracle",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_oracle.py"
+    },
+    "tests.dialects.test_pipe_syntax": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_pipe_syntax",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_pipe_syntax.py"
+    },
+    "tests.dialects.test_postgres": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.generator",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.simplify",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_postgres",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_postgres.py"
+    },
+    "tests.dialects.test_presto": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.generator",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_presto",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_presto.py"
+    },
+    "tests.dialects.test_prql": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_prql",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_prql.py"
+    },
+    "tests.dialects.test_redshift": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.schema",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_redshift",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_redshift.py"
+    },
+    "tests.dialects.test_risingwave": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_risingwave",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_risingwave.py"
+    },
+    "tests.dialects.test_singlestore": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.qualify",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_singlestore",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_singlestore.py"
+    },
+    "tests.dialects.test_snowflake": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.normalize_identifiers",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.qualify_columns",
+            "sqlglot.parser",
+            "sqlglot.parsers",
+            "sqlglot.parsers.snowflake",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_snowflake",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_snowflake.py"
+    },
+    "tests.dialects.test_solr": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_solr",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_solr.py"
+    },
+    "tests.dialects.test_spark": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.errors",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.qualify",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_spark",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_spark.py"
+    },
+    "tests.dialects.test_sqlite": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.generator",
+            "sqlglot.helper",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_sqlite",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_sqlite.py"
+    },
+    "tests.dialects.test_starrocks": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_starrocks",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_starrocks.py"
+    },
+    "tests.dialects.test_tableau": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_tableau",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_tableau.py"
+    },
+    "tests.dialects.test_teradata": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.lineage",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.qualify",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_teradata",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_teradata.py"
+    },
+    "tests.dialects.test_trino": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.generator",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_trino",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_trino.py"
+    },
+    "tests.dialects.test_tsql": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.qualify",
+            "tests",
+            "tests.dialects",
+            "tests.dialects.test_dialect"
+        ],
+        "name": "tests.dialects.test_tsql",
+        "path": "/home/muaz/comp/sqlglot/tests/dialects/test_tsql.py"
+    },
+    "tests.gen_fixtures": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer"
+        ],
+        "name": "tests.gen_fixtures",
+        "path": "/home/muaz/comp/sqlglot/tests/gen_fixtures.py"
+    },
+    "tests.helpers": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "tests.dialects.test_dialect",
+            "tests.leakcheck",
+            "tests.test_executor",
+            "tests.test_generator",
+            "tests.test_jsonpath",
+            "tests.test_optimizer",
+            "tests.test_parser",
+            "tests.test_serde",
+            "tests.test_transpile"
+        ],
+        "name": "tests.helpers",
+        "path": "/home/muaz/comp/sqlglot/tests/helpers.py"
+    },
+    "tests.leakcheck": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.expressions",
+            "sqlglot.expressions.core",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.leakcheck",
+        "path": "/home/muaz/comp/sqlglot/tests/leakcheck.py"
+    },
+    "tests.sqlglot": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "name": "tests.sqlglot",
+        "path": "/home/muaz/comp/sqlglot/tests/sqlglot/__init__.py"
+    },
+    "tests.test_anonymize": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.anonymize",
+            "sqlglot.tokens"
+        ],
+        "name": "tests.test_anonymize",
+        "path": "/home/muaz/comp/sqlglot/tests/test_anonymize.py"
+    },
+    "tests.test_build": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot"
+        ],
+        "name": "tests.test_build",
+        "path": "/home/muaz/comp/sqlglot/tests/test_build.py"
+    },
+    "tests.test_dialect_entry_points": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect"
+        ],
+        "name": "tests.test_dialect_entry_points",
+        "path": "/home/muaz/comp/sqlglot/tests/test_dialect_entry_points.py"
+    },
+    "tests.test_dialect_imports": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects"
+        ],
+        "name": "tests.test_dialect_imports",
+        "path": "/home/muaz/comp/sqlglot/tests/test_dialect_imports.py"
+    },
+    "tests.test_diff": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.diff",
+            "sqlglot.generator"
+        ],
+        "name": "tests.test_diff",
+        "path": "/home/muaz/comp/sqlglot/tests/test_diff.py"
+    },
+    "tests.test_docs": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot"
+        ],
+        "name": "tests.test_docs",
+        "path": "/home/muaz/comp/sqlglot/tests/test_docs.py"
+    },
+    "tests.test_errors": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors"
+        ],
+        "name": "tests.test_errors",
+        "path": "/home/muaz/comp/sqlglot/tests/test_errors.py"
+    },
+    "tests.test_executor": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "numpy",
+            "pandas",
+            "pandas.testing",
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.executor",
+            "sqlglot.executor.env",
+            "sqlglot.executor.python",
+            "sqlglot.executor.table",
+            "sqlglot.optimizer",
+            "sqlglot.planner",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.test_executor",
+        "path": "/home/muaz/comp/sqlglot/tests/test_executor.py"
+    },
+    "tests.test_expressions": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "pytz",
+            "sqlglot",
+            "sqlglot.parser"
+        ],
+        "name": "tests.test_expressions",
+        "path": "/home/muaz/comp/sqlglot/tests/test_expressions.py"
+    },
+    "tests.test_generator": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.errors",
+            "sqlglot.expressions",
+            "sqlglot.expressions.core",
+            "sqlglot.generator",
+            "sqlglot.parsers",
+            "sqlglot.parsers.snowflake",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.test_generator",
+        "path": "/home/muaz/comp/sqlglot/tests/test_generator.py"
+    },
+    "tests.test_helper": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.helper"
+        ],
+        "name": "tests.test_helper",
+        "path": "/home/muaz/comp/sqlglot/tests/test_helper.py"
+    },
+    "tests.test_integration_loader": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "name": "tests.test_integration_loader",
+        "path": "/home/muaz/comp/sqlglot/tests/test_integration_loader.py"
+    },
+    "tests.test_jsonpath": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.jsonpath",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.test_jsonpath",
+        "path": "/home/muaz/comp/sqlglot/tests/test_jsonpath.py"
+    },
+    "tests.test_lineage": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.lineage",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.scope",
+            "sqlglot.schema"
+        ],
+        "name": "tests.test_lineage",
+        "path": "/home/muaz/comp/sqlglot/tests/test_lineage.py"
+    },
+    "tests.test_optimize_cross_joins": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.optimize_joins",
+            "sqlglot.optimizer.qualify"
+        ],
+        "name": "tests.test_optimize_cross_joins",
+        "path": "/home/muaz/comp/sqlglot/tests/test_optimize_cross_joins.py"
+    },
+    "tests.test_optimizer": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "pandas",
+            "pandas.testing",
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.canonicalize_internal_names",
+            "sqlglot.optimizer.journal",
+            "sqlglot.optimizer.normalize",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.resolver",
+            "sqlglot.optimizer.scope",
+            "sqlglot.schema",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.test_optimizer",
+        "path": "/home/muaz/comp/sqlglot/tests/test_optimizer.py"
+    },
+    "tests.test_parser": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.parser",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.test_parser",
+        "path": "/home/muaz/comp/sqlglot/tests/test_parser.py"
+    },
+    "tests.test_schema": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "sqlglot.optimizer.qualify",
+            "sqlglot.optimizer.scope",
+            "sqlglot.schema"
+        ],
+        "name": "tests.test_schema",
+        "path": "/home/muaz/comp/sqlglot/tests/test_schema.py"
+    },
+    "tests.test_serde": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.expressions",
+            "sqlglot.expressions.core",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.annotate_types",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.test_serde",
+        "path": "/home/muaz/comp/sqlglot/tests/test_serde.py"
+    },
+    "tests.test_simplify_between": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.optimizer",
+            "sqlglot.optimizer.simplify"
+        ],
+        "name": "tests.test_simplify_between",
+        "path": "/home/muaz/comp/sqlglot/tests/test_simplify_between.py"
+    },
+    "tests.test_sqlglotc": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "setuptools",
+            "setuptools.command",
+            "setuptools.command.build_ext"
+        ],
+        "name": "tests.test_sqlglotc",
+        "path": "/home/muaz/comp/sqlglot/tests/test_sqlglotc.py"
+    },
+    "tests.test_time": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.dialects.dialect",
+            "sqlglot.generators",
+            "sqlglot.generators.hive",
+            "sqlglot.time"
+        ],
+        "name": "tests.test_time",
+        "path": "/home/muaz/comp/sqlglot/tests/test_time.py"
+    },
+    "tests.test_tokens": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.dialects",
+            "sqlglot.errors",
+            "sqlglot.tokens"
+        ],
+        "name": "tests.test_tokens",
+        "path": "/home/muaz/comp/sqlglot/tests/test_tokens.py"
+    },
+    "tests.test_transforms": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.expressions",
+            "sqlglot.transforms"
+        ],
+        "name": "tests.test_transforms",
+        "path": "/home/muaz/comp/sqlglot/tests/test_transforms.py"
+    },
+    "tests.test_transpile": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.errors",
+            "sqlglot.helper",
+            "sqlglot.parser",
+            "tests",
+            "tests.helpers"
+        ],
+        "name": "tests.test_transpile",
+        "path": "/home/muaz/comp/sqlglot/tests/test_transpile.py"
+    },
+    "tests.test_typing": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "sqlglot",
+            "sqlglot.typing"
+        ],
+        "name": "tests.test_typing",
+        "path": "/home/muaz/comp/sqlglot/tests/test_typing.py"
+    }
+}

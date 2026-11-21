@@ -1,0 +1,2 @@
+ship="!f(){git checkout master && git merge --ff-only main && git push origin master; git checkout main;}; f "
+new_best="!f(){git tag -a "v-best-$1" -m "$2" master && git branch -f bests master && git push origin bests --tags --force;}; f "
