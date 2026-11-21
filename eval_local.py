@@ -153,7 +153,9 @@ def compare(result, solution, verbose=True):
         if solution[commit] - result[commit]
     ]
 
-    print(f"\nCommits with missed tests: {len(commits_with_misses)}")
+    print(f"\nCommits with missed tests: {len(commits_with_misses)}:")
+    for i in commits_with_misses:
+        print(i)
 
 
 def main():

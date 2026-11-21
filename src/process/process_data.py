@@ -14,6 +14,8 @@ def process_data(commit_id, data=None):# data: EditedElement for edited_element.
     commit_tests = CommitTests(commit_id=commit_id, failing=[], kind="code")
     for dependent in dependents:
         dependent_file = dependent.file
+        if 'optimizer' in dependent_file:
+            commit_tests.failing.append(dependent)
         for py_file in data:
             if py_file.py_import_name in files_dep[dependent_file]:
                 commit_tests.failing.append(dependent)

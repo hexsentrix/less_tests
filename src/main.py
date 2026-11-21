@@ -8,7 +8,7 @@ def main():
     commits:list[CommitTests]=[]
     for commit in listdir("commits"):
         if commit.endswith('.patch'):
-            commit_id = commit.split('.')[0]
+            commit_id = commit
             #print("=" * 40,commit_id,"=" * 40)
             data = read_input(commit_id)
             processed_data = process_data(commit_id, data)

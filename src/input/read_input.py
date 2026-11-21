@@ -4,9 +4,8 @@ from .edited_element import PatachSet_to_EditedElements
 from .list_affected import list_affected
 
 
-commit_ext = 'patch'
-def read_input(commit_id:str):
-    data = read_diff(Path(f"{commit_id}.{commit_ext}"))
+def read_input(commit_id):
+    data = read_diff(Path(commit_id))
     data = PatachSet_to_EditedElements(data)
     return list_affected(data)
 
@@ -19,6 +18,6 @@ if __name__ == "__main__":
     for commit_file in commit_files:
         commit_id = commit_file.split('.')[0]
         print("=" * 40,commit_id,"=" * 40)
-        data = read_input(commit_id)
+        data = read_input(commit_file)
         print(f"Commit ID: {commit_id}")
         print(f"Data: {data}")
