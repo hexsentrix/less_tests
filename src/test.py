@@ -1,6 +1,6 @@
 from input.read_input import read_input
 from process.process_data import process_data,CommitTests
-from output.write_output import write_output
+from output.write_output import write_output_to_json
 from os import listdir,getenv
 
 
@@ -13,6 +13,6 @@ def main():
             data = read_input(commit_id)
             processed_data = process_data(commit_id, data)
             commits.append(processed_data)
-    write_output(commits)
+    write_output_to_json(commits)
 if __name__ == '__main__':
     main()
