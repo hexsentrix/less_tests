@@ -5,9 +5,9 @@ from .list_affected import list_affected
 
 
 def read_input(commit_id):
-    data = read_diff(Path(commit_id))
-    data = PatachSet_to_EditedElements(data)
-    return list_affected(data)
+    diff = read_diff(Path(commit_id))
+    data = PatachSet_to_EditedElements(diff[0])
+    return list_affected(data),diff[1]
 
 if __name__ == "__main__":
     from os import getenv

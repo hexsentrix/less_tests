@@ -33,6 +33,13 @@ class ChangeType(Enum):
     REMOVED = "removed"
     MODIFIED = "modified"
 
+@dataclass
+class AffectedClass:
+    name: str
+    lower_name: str
+    def __init__(self,name:str):
+        self.name=name
+        self.lower_name=name.lower()
 
 @dataclass
 class EditedElement:
@@ -70,3 +77,8 @@ def PatachSet_to_EditedElements(patch_set: PatchSet) -> list[EditedElement]:
         edited_elements.append(edited_element)
 
     return edited_elements
+
+def diff_file_to_AffectedClass(text: Path) -> list[AffectedClass]:
+    class_name_start = text[text.index('class')+6:text.index('class')+12]
+    class_name_end = text[text.index('(')-6:text.index('(')]
+    return [AffectedClass(class_name_start),AffectedClass(class_name_end)]

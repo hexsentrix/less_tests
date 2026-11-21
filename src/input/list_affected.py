@@ -15,9 +15,8 @@ def list_affected(
     edited_elements: list[EditedElement],
     code_deps_graph: Path = (
         Path(__file__).parent.parent.parent / "assets" / "code_deps.json"
-    ),
+    )
 ) -> list[Affected]:
-
     with open(code_deps_graph, "r", encoding="utf-8") as f:
         graph: dict = json.load(f)
 
@@ -32,7 +31,7 @@ def list_affected(
     visited: set[str] = set(initial_imports)
     to_visit = deque(initial_imports)
 
-    affected: list[Affected] = [
+    affected_files: list[Affected] = [
         Affected(name) for name in initial_imports
     ]
 
@@ -50,6 +49,6 @@ def list_affected(
             visited.add(dependent)
 
             to_visit.append(dependent)
-            affected.append(Affected(dependent))
+            affected_files.append(Affected(dependent))
 
-    return affected
+    return affected_files
