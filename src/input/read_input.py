@@ -13,7 +13,7 @@ if __name__ == "__main__":
     from os import getenv
     from os import listdir
     from os.path import isfile, join
-    commit_files = [f for f in listdir("commits") if isfile(join("commits", f)) and f.endswith(commit_ext)]
+    commit_files = [f for f in listdir("commits")]
     print(f"Found {len(commit_files)} commit files.")
     for commit_file in commit_files:
         commit_id = commit_file.split('.')[0]

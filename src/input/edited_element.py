@@ -66,7 +66,7 @@ def PatachSet_to_EditedElements(patch_set: PatchSet) -> list[EditedElement]:
     for patched_file in patch_set:
         file_path = patched_file.path
         if not is_python_file(Path(file_path)):
-            continue
+            assert file_path.endswith('.sql')
         change_type = ChangeType.ADDED if patched_file.is_added_file else ChangeType.REMOVED if patched_file.is_removed_file else ChangeType.MODIFIED
 
         edited_element = EditedElement(
