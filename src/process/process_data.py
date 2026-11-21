@@ -2,6 +2,7 @@ from .files_dep import get_files_dep
 from .dependent_list import get_dependent_tests,Test
 from dataclasses import dataclass
 from pathlib import Path
+import os
 @dataclass
 class CommitTests:
     commit_id: str
@@ -18,13 +19,16 @@ def class_tests(classes_names):
                 class_dependent.append(dependent)
     return class_dependent
 
+
 def process_data(commit_id, edited_files=None,additional_dep=None):# data: EditedElement for edited_element.py
     files_dep = get_files_dep()
     dependents = get_dependent_tests()
     commit_tests = CommitTests(commit_id=commit_id, failing=additional_dep, kind="code")
     for dependent in dependents:
         dependent_file = dependent.file
-        if 'optimizer' in dependent_file:
+        if 'optim' in dependent_file:
+            commit_tests.failing.append(dependent)
+        if 'exec' in dependent_file:
             commit_tests.failing.append(dependent)
         if 'expr' in dependent_file:
             commit_tests.failing.append(dependent)

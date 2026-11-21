@@ -56,7 +56,7 @@ def write_output_to_json(processed_data):#commits list to write to json file
     with open(getenv("output_file_path", "output.json"), "w") as f:
         json.dump(output_dict, f)
 
-def split_accross(tests , worker_count: int=3) -> list[list[int]]:
+def split_accross(tests , worker_count: int=8) -> list[list[int]]:
     """Longest test first, each onto the worker with the least to do so far."""
     workers: list[list[int]] = [[] for _ in range(worker_count)]
     loads = [0.0] * worker_count
