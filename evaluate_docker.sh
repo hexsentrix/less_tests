@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -6,7 +5,6 @@ docker build -t rwx-solution .
 
 mkdir -p /tmp/rwx-docker-test
 
-# Run test selector from inside tests_data
 docker run --rm \
     --network none \
     --read-only \
@@ -15,11 +13,11 @@ docker run --rm \
     --cpus=2 \
     --pids-limit=256 \
     --workdir /app/tests_data \
+    --mount type=bind,source=/tmp/rwx-docker-test,target=/output \
+    -e output_file_path=/output/output.json \
     rwx-solution \
-    python ../src/test.py \
-    > /tmp/rwx-docker-test/output.json
+    python ../src/test.py
 
-# Evaluate generated output against ground truth
 python eval_local.py \
     /tmp/rwx-docker-test/output.json \
     tests_data/answers.json
