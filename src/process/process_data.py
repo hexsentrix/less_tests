@@ -1,7 +1,7 @@
 from .files_dep import get_files_dep
 from .dependent_list import get_dependent_tests,Test
 from dataclasses import dataclass
-
+from pathlib import Path
 @dataclass
 class CommitTests:
     commit_id: str
@@ -17,7 +17,4 @@ def process_data(commit_id, data=None):# data: EditedElement for edited_element.
         for py_file in data:
             if py_file.py_import_name in files_dep[dependent_file]:
                 commit_tests.failing.append(dependent)
-        if 'sqlglotc' in files_dep[dependent_file]:
-            commit_tests.kind = "fixture"
-            commit_tests.failing.append(dependent.number)
     return commit_tests

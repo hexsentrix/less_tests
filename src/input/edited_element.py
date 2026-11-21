@@ -42,9 +42,6 @@ class EditedElement:
     element_type: ElementType = ElementType.UNKNOWN
     py_import_name: str | None = None
 
-    old_line_numbers: list[int] = field(default_factory=list)
-    new_line_numbers: list[int] = field(default_factory=list)
-
     edit_effect: EditEffect = EditEffect.UNKNOWN
 def is_python_file(file_path: str) -> bool:
     return Path(file_path).suffix == ".py"
