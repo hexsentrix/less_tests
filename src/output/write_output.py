@@ -68,4 +68,4 @@ def split_accross(tests , worker_count: int=3) -> list[list[int]]:
 
 def write_output(processed_data):
     for commit in processed_data:
-        print(json.dumps({"commit": commit.commit_id, "workers": split_accross(commit.failing)}))
+        print(json.dumps({"commit": commit.commit_id, "workers": split_accross(set(commit.failing))}))
