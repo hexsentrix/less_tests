@@ -3,7 +3,10 @@ set -euo pipefail
 
 docker build -t rwx-solution .
 
-mkdir -p /tmp/rwx-docker-test
+OUTPUT_DIR="/tmp/rwx-docker-test"
+
+mkdir -p "$OUTPUT_DIR"
+chmod 777 "$OUTPUT_DIR"
 
 docker run --rm \
     --network none \
@@ -13,11 +16,11 @@ docker run --rm \
     --cpus=2 \
     --pids-limit=256 \
     --workdir /app/tests_data \
-    --mount type=bind,source=/tmp/rwx-docker-test,target=/output \
+    --mount "type=bind,source=$OUTPUT_DIR,target=/output" \
     -e output_file_path=/output/output.json \
     rwx-solution \
     python ../src/test.py
 
 python eval_local.py \
-    /tmp/rwx-docker-test/output.json \
+    "$OUTPUT_DIR/output.json" \
     tests_data/answers.json
