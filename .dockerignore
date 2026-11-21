@@ -1,0 +1,13 @@
+
+.git/
+.gitconfig
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.tmp
+
+docs/
+assets/output.json
+tests_data
