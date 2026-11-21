@@ -42,7 +42,7 @@ jobs:
         run: |
           docker build -t rwx-solution .
 
-          - name: Run Docker evaluation
-            run: |
-              chmod +x evaluate_docker.sh
-              ./evaluate_docker.sh
+      - name: Run Docker evaluation
+        run: |
+          chmod +x evaluate_docker.sh
+          ./evaluate_docker.sh
