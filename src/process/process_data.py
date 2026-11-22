@@ -1,5 +1,5 @@
-from .files_dep import get_files_dep
-from .dependent_list import get_dependent_tests,Test
+from .tests_depenancies import get_tests_depenancies
+from .tests_list import get_all_tests,Test
 from dataclasses import dataclass
 from pathlib import Path
 import os
@@ -9,30 +9,15 @@ class CommitTests:
     failing: list[Test] #tests that may fail so we can rerun them
     kind: str # code | fixture
 
-def class_tests(classes_names):
-    dependents = get_dependent_tests()
-    class_dependent=[]
-    for class_name in classes_names:
-        for dependent in dependents:
-            dependent_file = dependent.file
-            if class_name.lower_name in dependent_file.lower():
-                class_dependent.append(dependent)
-    return class_dependent
 
 
-def process_data(commit_id, edited_files=None,additional_dep=None):# data: EditedElement for edited_element.py
-    files_dep = get_files_dep()
-    dependents = get_dependent_tests()
-    commit_tests = CommitTests(commit_id=commit_id, failing=additional_dep, kind="code")
-    for dependent in dependents:
-        dependent_file = dependent.file
-        if 'optim' in dependent_file:
-            commit_tests.failing.append(dependent)
-        if 'exec' in dependent_file:
-            commit_tests.failing.append(dependent)
-        if 'expr' in dependent_file:
-            commit_tests.failing.append(dependent)
+def process_data(commit_id, edited_files=None):# data: EditedElement for edited_element.py
+    tests_depenancies = get_tests_depenancies()
+    tests = get_all_tests()
+    commit_tests = CommitTests(commit_id=commit_id, failing=[], kind="code")
+    for test in tests:
+        test_file = test.file
         for py_file in edited_files:
-            if py_file.py_import_name in files_dep[dependent_file]:
-                commit_tests.failing.append(dependent)
+            if py_file.py_import_name in tests_depenancies[test_file]:
+                commit_tests.failing.append(test)
     return commit_tests

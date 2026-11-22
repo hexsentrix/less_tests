@@ -5,7 +5,11 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 
-def get_files_dep(dep_graph: str = PROJECT_ROOT/"assets/tests_deps.json",target='sqlglot', target_keyword='tests') -> dict[str:list[str]]:
+def expand(files_dep:dict[str:list[str]])->dict[str:list[str]]:
+    return files_dep
+
+def get_tests_depenancies(dep_graph: str = PROJECT_ROOT/"assets/tests_deps.json",target='sqlglot', target_keyword='tests') -> dict[str:list[str]]:
+    "Get The files that the py files depenace on"
     with open(dep_graph, "r", encoding="utf-8") as f:
         files = json.load(f)
 
@@ -23,5 +27,5 @@ def get_files_dep(dep_graph: str = PROJECT_ROOT/"assets/tests_deps.json",target=
 
 
 if __name__ == "__main__":
-    for i in get_files_dep().items():
+    for i in get_files_depenancies().items():
         print(i)

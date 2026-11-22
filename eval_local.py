@@ -118,8 +118,8 @@ def compare(result, solution, verbose=True):
         if verbose:
             if missed:
                 print(f"  MISSED tests   : {missed}")
-            if unnecessary:
-                print(f"  Extra tests    : {unnecessary}")
+#            if unnecessary:
+#                print(f"  Extra tests    : {unnecessary}")
 
     precision, recall, f1, _ = calculate_metrics(
         totals["TP"],
@@ -153,9 +153,10 @@ def compare(result, solution, verbose=True):
         if solution[commit] - result[commit]
     ]
 
-    print(f"\nCommits with missed tests: {len(commits_with_misses)}:")
+    print(f"\nCommits with missed tests: {len(commits_with_misses)}:",commits_with_misses,"\ndetails")
     for i in commits_with_misses:
-        print(i)
+        print("#########",i,"#########")
+        print('expected:',solution[i],',got:',result[i])
 
 
 def main():

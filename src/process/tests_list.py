@@ -37,7 +37,7 @@ class Test:
     number: int
     seconds: float
 
-def get_dependent_tests(tests_file: str = "tests.json")->list[Test]:
+def get_all_tests(tests_file: str = "tests.json")->list[Test]:
     with open(tests_file, "r", encoding="utf-8") as f:
         tests_data = json.load(f)
     dependent_tests = [Test(test["file"], test["number"], test["seconds"]) for test in tests_data.get("tests", [])]

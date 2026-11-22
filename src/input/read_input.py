@@ -1,13 +1,12 @@
 from .read_diff import read_diff
 from pathlib import Path
-from .edited_element import PatachSet_to_EditedElements
-from .list_affected import list_affected
+from .edited_element import patch_set_to_edited_elements
 
 
 def read_input(commit_id):
     diff = read_diff(Path(commit_id))
-    data = PatachSet_to_EditedElements(diff[0])
-    return list_affected(data),diff[1]
+    data = patch_set_to_edited_elements(diff)
+    return data
 
 if __name__ == "__main__":
     from os import getenv
