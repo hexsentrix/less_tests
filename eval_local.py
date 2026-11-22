@@ -152,12 +152,17 @@ def compare(result, solution, verbose=True):
         commit for commit in common_commits
         if solution[commit] - result[commit]
     ]
-
+    with open('tests.json', "r", encoding="utf-8") as f:
+            files = dict(json.load(f))
     print(f"\nCommits with missed tests: {len(commits_with_misses)}:",commits_with_misses,"\ndetails")
     for i in commits_with_misses:
         print("#########",i,"#########")
+        print('patch file:')
+        with open('commits/'+i+'.patch','r',encoding='utf-8') as f:
+            print(f.read())
         print('expected:',solution[i],',got:',result[i])
-
+        for j in solution[i] - result[i]:
+            print('missed: ',j,'/', files['tests'][j])
 
 def main():
     parser = argparse.ArgumentParser(

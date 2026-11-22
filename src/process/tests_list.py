@@ -36,10 +36,14 @@ class Test:
     file: str
     number: int
     seconds: float
+    id: str
 
 def get_all_tests(tests_file: str = "tests.json")->list[Test]:
     with open(tests_file, "r", encoding="utf-8") as f:
         tests_data = json.load(f)
-    dependent_tests = [Test(test["file"], test["number"], test["seconds"]) for test in tests_data.get("tests", [])]
+    dependent_tests = [
+        Test(test["file"], test["number"], test["seconds"], test["id"])
+        for test in tests_data.get("tests", [])
+    ]
     
     return dependent_tests
